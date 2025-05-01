@@ -13,15 +13,14 @@ df_test = pandas.read_csv('DATA/test.csv', encoding='latin1')
 # print(df_train.shape)
 # print(len(df_train['product_title'].unique()))
 # print(df_train['product_title'].value_counts().head(10))
-print(df_train['relevance'].mean(), df_train['relevance'].median(), df_train['relevance'].std())
+# print(df_train['relevance'].mean(), df_train['relevance'].median(), df_train['relevance'].std())
 
-# plt.boxplot(df_train['relevance'], vert=False)
-# plt.title('Boxplot of Relevance Values')
+
+
+# plt.hist(df_train['relevance'], bins=50, color='blue', alpha=0.7)
+# plt.title('Histogram of Relevance Values')
 # plt.xlabel('Relevance')
+# plt.ylabel('Frequency')
 # plt.show()
 
-plt.hist(df_train['relevance'], bins=50, color='blue', alpha=0.7)
-plt.title('Histogram of Relevance Values')
-plt.xlabel('Relevance')
-plt.ylabel('Frequency')
-plt.show()
+print(df_attributes['product_uid'].value_counts().head(5))
